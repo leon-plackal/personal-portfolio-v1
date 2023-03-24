@@ -1,35 +1,27 @@
-html,
-body {
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-/* .theme-light {
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;500;700&family=Montserrat:wght@300&family=Roboto+Mono&display=swap');
+.theme-light {
     --bgColor: #191919;
-    --textPrimary: #fff;
-    --textSecondary: rgb(153, 153, 153);
-    --primaryColor: rgb(91, 255, 219);
-    --accent-1: #11212d;
-    --accent-2: #1a3143;
- }.theme-dark {
-    --bgColor: #eefffd;
-    --textPrimary: #000000;
-    --textSecondary: rgb(134, 134, 134);
-    --primaryColor: rgb(11, 80, 73);
-    --accent-1: #9cc8cb;
-    --accent-2: #71a29e;
- } */
- 
+    --dot-color: #ffffff;
+    --textHeading: #969696;
+    --text2: #A7A9AC;
+    --text3: rgb(117, 117, 117);
+ }
+.theme-dark {
+    --bgColor: #f5f5f5;
+    --dot-color: #000000;
+    --textHeading: #4f4f4f;
+    --text2: #1d1d1d;
+    --text3: rgb(117, 117, 117);
+} 
+:root{
+
+}
  body,html {
-  /* temprarily here */
-  /* --bgColor: #F7F9FB; */
-  --textHeading: #454546;
-  --text2: #A7A9AC;
-  --text3: rgb(117, 117, 117);
   margin: 0;
   padding: 0;
   background: var(--bgColor);
-
+  box-sizing: border-box;
+  overflow-x: hidden;
   font-family: 'Manrope', sans-serif;
 }
 * {
@@ -45,8 +37,10 @@ span{
 
 h1, h2, h3, h4, h5, h6, p{
   margin: 0;
-  font-family: 'Manrope', sans-serif;
   font-weight: 500
+}
+p, h3{
+  color: var(--text2);
 }
 h2{
   color: var(--text2);
@@ -80,7 +74,7 @@ h3{
 }
 .info-title h1{
   font-family: 'Manrope', sans-serif;
-      transition: 200ms ease-in;
+  transition: 200ms ease-in;
   font-size: 6rem;
   font-weight: 100;
   color: var(--textHeading);
@@ -245,7 +239,7 @@ h3{
   z-index: -100;
   width: 95vw;
   height: 90vh;
-  background-color: white;
+  background-color: var(--bgColor);
   margin: auto;
   display: flex;
   align-items: center;

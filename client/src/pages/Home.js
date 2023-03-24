@@ -6,7 +6,28 @@ import { Canvas, extend, useFrame, useLoader, useThree } from 'react-three-fiber
 import circleImg from '../assets/circle.png';
 import { Suspense, useCallback, useMemo, useRef } from 'react';
 
-// import ReactLoading from "react-loading";
+//theme change
+// function to set a given theme/color-scheme
+function setTheme(themeName) {
+  localStorage.setItem('theme', themeName);
+  document.documentElement.className = themeName;
+}// function to toggle between light and dark theme
+function toggleTheme() {
+ if (localStorage.getItem('theme') === 'theme-dark'){
+     setTheme('theme-light');
+ } else {
+     setTheme('theme-dark');
+ }
+}// Immediately invoked function to set the theme on initial load
+(function () {
+ if (localStorage.getItem('theme') === 'theme-dark') {
+     setTheme('theme-dark');
+ } else {
+     setTheme('theme-light');
+ }
+})();
+
+
 extend({OrbitControls})
 
 function CameraControls(){
@@ -74,7 +95,6 @@ function Points() {
 
     bufferRef.current.needsUpdate = true;
   })
-
   return (
     <points>
       <bufferGeometry attach="geometry">
@@ -90,7 +110,7 @@ function Points() {
       <pointsMaterial
         attach="material"
         map={imgTex}
-        color={0x000000}
+        color={0x616161}
         size={0.5}
         sizeAttenuation
         transparent={false}
@@ -125,8 +145,8 @@ export default function Home (){
         
         <div id="homecontainer">
             <div class="left-bar">
-                <button><span>□</span> DARK</button>
-                <button><span>□</span> LIGHT</button>
+                <button onClick={toggleTheme}><span>□</span> DARK</button>
+                <button onClick={toggleTheme}><span>□</span> LIGHT</button>
             </div>
             <div class="right-bar">
                 <div id="links">
