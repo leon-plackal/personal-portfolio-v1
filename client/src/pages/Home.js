@@ -5,7 +5,9 @@ import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 import { Canvas, extend, useFrame, useLoader, useThree } from 'react-three-fiber';
 import circleImg from '../assets/circle.png';
 import { Suspense, useCallback, useMemo, useRef } from 'react';
-
+import { AiFillGithub } from 'react-icons/ai';
+import { AiFillLinkedin } from 'react-icons/ai';
+import { GiPlainCircle } from 'react-icons/gi';
 //theme change
 // function to set a given theme/color-scheme
 function setTheme(themeName) {
@@ -35,16 +37,18 @@ function CameraControls(){
     camera,
     gl: {domElement}
   } = useThree();
-
+  
   const controlsRef = useRef();
   useFrame(() => controlsRef.current.update())
 
+  
   return (
     <orbitControls
       ref={controlsRef}
       args={[camera, domElement]}
       autoRotate
       autoRotateSpeed={-0.2}
+      enabled = {false}
     />
   );
 }
@@ -57,11 +61,11 @@ function Points() {
   let f = 0.001;
   let a = 2;
   const graph = useCallback((x, z) => {
-    return Math.sin(f * (x ** 5 + z ** 7 + t)) * a;
+    return Math.sin(f * (x ** 6  + z ** 6 + t)) * a;
   }, [t, f, a])
 
-  const count = 400
-  const sep = 2
+  const count = 200
+  const sep = 1
   let positions = useMemo(() => {
     let positions = []
 
@@ -125,7 +129,7 @@ function AnimationCanvas() {
   return (
     <Canvas
       colorManagement={false}
-      camera={{ position: [100, 10, 0], fov: 75 }}
+      camera={{ position: [0,70,0], fov:50}}
     >
       <Suspense fallback={null}>
         <Points />
@@ -145,26 +149,26 @@ export default function Home (){
         
         <div id="homecontainer">
             <div class="left-bar">
-                <button onClick={toggleTheme}><span>□</span> DARK</button>
-                <button onClick={toggleTheme}><span>□</span> LIGHT</button>
+                <button onClick={toggleTheme}><GiPlainCircle/> THEME</button>
             </div>
             <div class="right-bar">
                 <div id="links">
+                  
                     <a class="home-links" href="./projects.html"><p>PROJECTS</p></a>
                     <a class="home-links" href="./about.html"><p>ABOUT</p></a>
                 </div>
                 <div id="socials">
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-regular fa-envelope"></i>
-                    <i class="fa-brands fa-github"></i> 
+                  <a href='https://github.com/leon-plackal'>
+                    <AiFillGithub id='socials-icon' />
+                  </a>
+                    
+                  <AiFillLinkedin id='socials-icon'/>
                  </div> 
-            </div>
-            <div class="home-graphic">
-
             </div>
             <div id="home-info">
                 <div class="info-title">
-                    <h1>Leon Plackal</h1>
+                    <h1>Leon Plackal </h1>
+                    <h4>Developer</h4>
                 </div>
             </div>
             <div class="description">   
@@ -174,7 +178,7 @@ export default function Home (){
             </div>
             <div class="footer">
                 <p>Designed & Built by Leon P.</p>
-                <a href="">Get in Touch :</a>
+                <h5>With React and ThreeJS</h5>
             </div>
             
             

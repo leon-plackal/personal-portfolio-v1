@@ -2,7 +2,7 @@
 .theme-light {
     --bgColor: #191919;
     --dot-color: #ffffff;
-    --textHeading: #969696;
+    --textHeading: #e5e5e5;
     --text2: #A7A9AC;
     --text3: rgb(117, 117, 117);
  }
@@ -13,9 +13,13 @@
     --text2: #1d1d1d;
     --text3: rgb(117, 117, 117);
 } 
-:root{
-
+.faicon1{
+  color: white;
 }
+.faicon2{
+  color: black;
+}
+
  body,html {
   margin: 0;
   padding: 0;
@@ -61,23 +65,32 @@ h3{
 #home-info{
   display: flex;
   position: absolute;
-  left: 100px;
-  top: 20px;
+  left: 3.5%;
+  top: 3.0%;
 }
 .description {
   display: flex;
   flex-direction: column;
   width: 300px;
   position: absolute;
-  left: 100px;
-  bottom: 40px;
+  left: 3.5%;
+  bottom: 7%;
 }
 .info-title h1{
   font-family: 'Manrope', sans-serif;
   transition: 200ms ease-in;
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 100;
   color: var(--textHeading);
+  padding-top: 2rem;
+}
+.info-title h4{
+  font-family: 'Manrope', sans-serif;
+  color: var(--textHeading);
+}
+.info-title{
+  justify-content: left;
+  margin: 0;
 }
 
 .right-bar i{
@@ -89,12 +102,13 @@ h3{
   position: fixed;
   align-items: center;
   flex-direction: column;
-  gap: 20rem;
+  gap: 10rem;
   width: 40px;
-  right: 50px;
+  right: 1%;
   left: auto;
   bottom: 50px;
   z-index: 10;
+  padding: 2rem 0;
 }
 #subheading-line{
   height: 1px;
@@ -117,11 +131,14 @@ h3{
   flex-direction: column;
   align-items: center;
 }
+#socials-icon{
+  fill: var(--text2);
+}
 .left-bar {
   width: 40px;
   position: fixed;
-  bottom: 50px;
-  left: 40px;
+  bottom: 9%;
+  left: 1%;
   right: auto;
   z-index: 10;
   display: flex;
@@ -134,24 +151,20 @@ h3{
   height: 20px;
   background: transparent;
   border: transparent;
-  text-decoration: none;
-  display: inline-flex;
-  gap: 10px;
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateY(-25px);
+  width: 80px;
 }
-.left-bar span{
-  transform: translateY(-8px);
-  font-size: 1.4rem;
-  height: 20px;
-}
+
+
 .footer{
   position: fixed;
-  bottom: 40px;
+  bottom: 6%;
   align-self: center;
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
   align-items: center;
   color: #A7A9AC;
+  font-size: 0.8rem;
 }
 
 .container{
@@ -237,15 +250,15 @@ h3{
 .anim {
   position: absolute;
   z-index: -100;
-  width: 95vw;
+  width: 95%;
   height: 90vh;
   background-color: var(--bgColor);
   margin: auto;
   display: flex;
-  align-items: center;
-  left: 3rem;
+  left: 2.5%;
+  right: auto;
   top: 3rem;
-  /* border: 1px solid black; */
+  border: 1px solid var(--text2);
 }
 
 .fdsa{
