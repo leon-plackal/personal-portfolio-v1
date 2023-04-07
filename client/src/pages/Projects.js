@@ -1,36 +1,63 @@
+import {Link} from "react-router-dom"
+import image2 from "../assets/KeyNinja.png"
+import image1 from "../assets/portfoliov1.png"
+import { AiFillGithub } from 'react-icons/ai';
+import { AiFillLinkedin } from 'react-icons/ai';
+import { GiPlainCircle } from 'react-icons/gi';
+
+function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+  }// function to toggle between light and dark theme
+  function toggleTheme() {
+   if (localStorage.getItem('theme') === 'theme-dark'){
+       setTheme('theme-light');
+   } else {
+       setTheme('theme-dark');
+   }
+  }// Immediately invoked function to set the theme on initial load
+  (function () {
+   if (localStorage.getItem('theme') === 'theme-dark') {
+       setTheme('theme-dark');
+   } else {
+       setTheme('theme-light');
+   }
+  })();
+
 export default function Projects() {
     return (
         <section id="project" class="container">
             
-        <div class="left-bar">
-            <button><span>□</span> DARK</button>
-            <button><span>□</span> LIGHT</button>
-        </div>
-        <div class="right-bar">
-            <div id="links">
-                <a class="home-links" href="./projects.html"><p>PROJECTS</p></a>
-                <a class="home-links" href="./about.html"><p>ABOUT</p></a>
-                <a class="home-links" href="./index.html"><p>HOME</p></a>
+            <div class="left-bar">
+                <button onClick={toggleTheme}><GiPlainCircle/> THEME</button>
             </div>
-            <div id="socials">
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-regular fa-envelope"></i>
-                <i class="fa-brands fa-github"></i> 
-             </div> 
-        </div>
+            <div class="right-bar">
+                <div id="links">
+                  <Link to="/projects" className="home-links"><p>PROJECTS</p></Link>
+                  <Link to="/about" className="home-links"><p>ABOUT</p></Link>
+                  <Link to="/" className="home-links"><p>HOME</p></Link>
+                </div>
+                <div id="socials">
+                  <a href='https://github.com/leon-plackal'>
+                    <AiFillGithub id='socials-icon' />
+                  </a>
+                    
+                  <AiFillLinkedin id='socials-icon'/>
+                 </div> 
+            </div>
         <div id="project-header">
             <p>My Latest Work</p>
             <h1 class="title">0.2 Recent Projects</h1>
 
             <div class="featured-project">
                 <div class="image">
-
+                <img src={image2} alt="KeyNinja" />
                 </div>
                 <div class="info">
                     <h3>Featured Project</h3>
                     <h2>Typing Game</h2>
                     <div class="featured-description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis velit asperiores sit eos earum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis velit asperiores sit eos earum?</p>
+                        <p>This typing game showcases CSS and JS tricks to create a live typing game with error detection, WPM count, timer options, theme changer, random words and div/span manipulation.</p>
                     </div>
                     <div class="tags">
                         <ul>
@@ -47,13 +74,13 @@ export default function Projects() {
             </div>
             <div class="featured-project">
                 <div class="image">
-
+                <img src={image1} alt="KeyNinja" />
                 </div>
                 <div class="info">
                     <h3>Featured Project</h3>
                     <h2>Portfolio V1</h2>
                     <div class="featured-description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis velit asperiores sit eos earum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis velit asperiores sit eos earum?</p>
+                        <p>The first iteration of my Portfolio built with React and featuring a ThreeJS particle background. It also makes use of routing, light and dark mode, </p>
                     </div>
                     <div class="tags">
                         <ul>
@@ -70,7 +97,7 @@ export default function Projects() {
                 </div>
             </div>
 
-            <h3>Archive</h3>
+            <h3>Other Notable Work</h3>
             <div class="archive-tiles">
                 <div class="tile"></div>
                 <div class="tile"></div>

@@ -8,6 +8,8 @@ import { Suspense, useCallback, useMemo, useRef } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { GiPlainCircle } from 'react-icons/gi';
+import {Link} from "react-router-dom"
+
 //theme change
 // function to set a given theme/color-scheme
 function setTheme(themeName) {
@@ -153,9 +155,8 @@ export default function Home (){
             </div>
             <div class="right-bar">
                 <div id="links">
-                  
-                    <a class="home-links" href="./projects.html"><p>PROJECTS</p></a>
-                    <a class="home-links" href="./about.html"><p>ABOUT</p></a>
+                  <Link to="/projects" className="home-links"><p>PROJECTS</p></Link>
+                  <Link to="/about" className="home-links"><p>ABOUT</p></Link>
                 </div>
                 <div id="socials">
                   <a href='https://github.com/leon-plackal'>

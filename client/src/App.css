@@ -5,6 +5,11 @@
     --textHeading: #e5e5e5;
     --text2: #A7A9AC;
     --text3: rgb(117, 117, 117);
+    --textsmall: #6b6b6b;
+    --accent2: #191f28;
+    --border: #a2a2a2;
+    --accent3: #30c7d8;
+
  }
 .theme-dark {
     --bgColor: #f5f5f5;
@@ -12,6 +17,10 @@
     --textHeading: #4f4f4f;
     --text2: #1d1d1d;
     --text3: rgb(117, 117, 117);
+    --textsmall: #9d9d9d;
+    --accent2: #bdc4cf;
+    --border: #4f4f4f;
+    --accent3: #13535a;
 } 
 .faicon1{
   color: white;
@@ -119,8 +128,9 @@ h3{
   gap: 2rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   transform: rotate(-90deg);
+  align-items: center;
+  justify-content: center;
 }
 .home-links{
   font-size: large;
@@ -163,7 +173,7 @@ h3{
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #A7A9AC;
+  color: var(--textsmall);
   font-size: 0.8rem;
 }
 
@@ -183,7 +193,9 @@ h3{
 #project-header p{
   font-size: 1rem;
 }
-
+#project-header H1{
+  color: var(--textHeading);
+}
 .archive-tiles{
   padding: 2rem 0;
   display: grid;
@@ -195,22 +207,25 @@ h3{
   width: 100%;
   height: 200px;
   background-color: #b4b4b4;
-  border-radius: 3px;
+  /* border-radius: 3px; */
+  border: var(--textHeading) 2px solid;
 }
 .featured-project{
   display: grid;
   height: 350px;
   margin: 4rem auto;
-  border-radius: 5px;
-  background-color: rgb(206, 214, 220);
+  /* border-radius: 5px; */
+  background-color: var(--accent2);
+  border: var(--border) 2px solid;
+
 }
 .featured-project .image{
   position: absolute;
   justify-self:flex-start;
-  height: 350px;
+  height: 347px;
   width: 500px;
   background-color: #c5c5c5;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .featured-project .info{
@@ -224,8 +239,11 @@ h3{
 
 }
 .featured-project .info h3{
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-family: 'Roboto Mono', monospace;
+  font-weight: 100;
+  color: var(--accent3);
+
 }
 .featured-project .info h2{
   font-size: 2rem;
@@ -238,6 +256,12 @@ h3{
   font-size: 0.9rem;
   font-family: 'Roboto Mono', monospace;
   list-style-type: none;
+  color: var(--accent3);
+}
+
+.tags{
+  position: relative;
+  bottom: 0px;
 }
 
 .featured-description{
@@ -264,3 +288,36 @@ h3{
 .fdsa{
   z-index: 10;
 }
+
+.featured-project .image{
+  display: flex;
+}
+.featured-project .image img{
+  max-width:100%;
+  max-height:100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+.featured-project .image img:hover{
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+
+/* tabs */
+.tabholder{
+  width: 70%;
+  height: 250px;
+  display: flex;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.bloc-tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
