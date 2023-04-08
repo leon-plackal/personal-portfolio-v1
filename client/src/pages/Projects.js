@@ -46,7 +46,7 @@ export default function Projects() {
                  </div> 
             </div>
         <div id="project-header">
-            <p>My Latest Work</p>
+            <p className="subheading">My Latest Work</p>
             <h1 class="title">0.2 Recent Projects</h1>
 
             <div class="featured-project">
@@ -57,7 +57,7 @@ export default function Projects() {
                     <h3>Featured Project</h3>
                     <h2>Typing Game</h2>
                     <div class="featured-description">
-                        <p>This typing game showcases CSS and JS tricks to create a live typing game with error detection, WPM count, timer options, theme changer, random words and div/span manipulation.</p>
+                        <p>This project showcases CSS and JS tricks to create a live typing game with error detection, WPM count, timer options, randomized word generation and div/span manipulation.</p>
                     </div>
                     <div class="tags">
                         <ul>
@@ -80,7 +80,7 @@ export default function Projects() {
                     <h3>Featured Project</h3>
                     <h2>Portfolio V1</h2>
                     <div class="featured-description">
-                        <p>The first iteration of my Portfolio built with React and featuring a ThreeJS particle background. It also makes use of routing, light and dark mode, </p>
+                        <p>The first iteration of my Portfolio built with React and featuring a ThreeJS particle background. It also makes use of routing, light and dark mode, and is hosted on GitHub pages.</p>
                     </div>
                     <div class="tags">
                         <ul>
@@ -97,7 +97,7 @@ export default function Projects() {
                 </div>
             </div>
 
-            <h3>Other Notable Work</h3>
+            <h3 className="subheading">Project Archive</h3>
             <div class="archive-tiles">
                 <div class="tile"></div>
                 <div class="tile"></div>

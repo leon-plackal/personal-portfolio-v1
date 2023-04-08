@@ -43,13 +43,21 @@ export default function About() {
                   <AiFillLinkedin id='socials-icon'/>
                  </div> 
             </div>
+
+            <div id='aboutheader'>
+                <p className='subheading'>What I Offer</p>
+                <h1 class="title">0.1 About Me</h1>
+            </div>
+
+            <div id='aboutcontent'>
+            <p>Hello! My name is Leon. I have been interested in coding and the general computer science field since a young age. I am always seeking to add new features and skills to by toolkit, and am always looking to put it into use in my projects. Apart from computer science, I also have a good eye for design principles and creating user friendly UI/UX. I also have some biomedical knowledge!</p>
+
             <p>Most of my work resides within the web development scene. Here are some technologies I have been working with recently:</p>
             <ul>
                 <li>React</li>
                 <li>Javascript</li>
                 <li>MongoDB</li>
-                <li>CSS</li>
-                <li>HTML</li>
+                <li>Python</li>
             </ul>
             
             <p>However I also have experience in desktop and web app development with these technologies:</p><ul>
@@ -58,9 +66,11 @@ export default function About() {
                 <li>Electron</li>
                 <li>.NET</li>
             </ul>
-
-            <div className="App">
+            <p>My other interests also include machine learning and utilising artificial intelligence to make our lives easier and more effcient. Nice to meet you!</p>
+            <div id="tabdiv">
+                <h3 className='subheading'>Places I've worked</h3>
                 <Tabs />
+            </div>
             </div>
         </section>
     )

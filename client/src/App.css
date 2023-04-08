@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;500;700&family=Montserrat:wght@300&family=Roboto+Mono&display=swap');
 .theme-light {
     --bgColor: #191919;
-    --dot-color: #ffffff;
+    --dot-color: #afafaf;
     --textHeading: #e5e5e5;
     --text2: #A7A9AC;
     --text3: rgb(117, 117, 117);
     --textsmall: #6b6b6b;
     --accent2: #191f28;
-    --border: #a2a2a2;
-    --accent3: #30c7d8;
+    --border: #afafaf;
+    --accent3: #26dc96;
 
  }
 .theme-dark {
@@ -18,8 +18,8 @@
     --text2: #1d1d1d;
     --text3: rgb(117, 117, 117);
     --textsmall: #9d9d9d;
-    --accent2: #bdc4cf;
-    --border: #4f4f4f;
+    --accent2: #dfdfdf;
+    --border: #343434;
     --accent3: #13535a;
 } 
 .faicon1{
@@ -28,6 +28,15 @@
 .faicon2{
   color: black;
 }
+ul {
+  list-style-type: none;
+}
+#aboutcontent li:before { 
+  content: "▹"; 
+  margin-left: -20px; 
+  margin-right: 10px; 
+  color: var(--accent3); 
+} 
 
  body,html {
   margin: 0;
@@ -61,6 +70,11 @@ h2{
 }
 h3{
   font-weight: bold;
+}
+.subheading{
+  color: var(--accent3);
+  font-weight: 500;
+  font-size: 1.4rem;
 }
 .logo{
   height: 50px;
@@ -113,7 +127,7 @@ h3{
   flex-direction: column;
   gap: 10rem;
   width: 40px;
-  right: 1%;
+  right: 0.5%;
   left: auto;
   bottom: 50px;
   z-index: 10;
@@ -148,7 +162,7 @@ h3{
   width: 40px;
   position: fixed;
   bottom: 9%;
-  left: 1%;
+  left: .5%;
   right: auto;
   z-index: 10;
   display: flex;
@@ -164,7 +178,9 @@ h3{
   transform: rotate(-90deg) translateY(-25px);
   width: 80px;
 }
-
+.left-bar svg{
+  transform: translateY(2px);
+}
 
 .footer{
   position: fixed;
@@ -207,14 +223,12 @@ h3{
   width: 100%;
   height: 200px;
   background-color: #b4b4b4;
-  /* border-radius: 3px; */
   border: var(--textHeading) 2px solid;
 }
 .featured-project{
   display: grid;
   height: 350px;
   margin: 4rem auto;
-  /* border-radius: 5px; */
   background-color: var(--accent2);
   border: var(--border) 2px solid;
 
@@ -223,9 +237,8 @@ h3{
   position: absolute;
   justify-self:flex-start;
   height: 347px;
-  width: 500px;
+  width: 450px;
   background-color: #c5c5c5;
-  /* border-radius: 5px; */
 }
 
 .featured-project .info{
@@ -263,6 +276,7 @@ h3{
   position: relative;
   bottom: 0px;
 }
+
 
 .featured-description{
   flex-wrap: wrap;
@@ -316,8 +330,49 @@ h3{
 .bloc-tabs {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
+.tab_btn{
+  height: 30px;
+  text-decoration: none;
+  border: none;
+  background-color: #191f28;
+}
 
+.tab_btn.active{
+  color: var(--accent3);
+}
+.line{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 20px;
+  background-color: var(--accent3);
+  transition: all 0.3s ease-in-out;
+}
+#aboutheader{
+  padding-top: 4rem;
+}
+#aboutheader h1{
+  font-size: 3rem;
+  color: var(--textHeading);
+  padding-bottom: 2rem;
+}
 
-
+#aboutcontent{
+  color: var(--text2);
+}
+#aboutcontent p{
+  padding-bottom: 1rem;
+}
+#aboutcontent ul{
+  margin: 0 0 1rem 0 ;
+}
+#tabdiv{
+  padding: 2rem 0;
+}
+#tabdiv h3{
+    padding: 1rem 0;
+}

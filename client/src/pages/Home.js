@@ -175,7 +175,7 @@ export default function Home (){
             <div class="description">   
                 <h3>0.1 About Me</h3>
                 <div id="subheading-line"></div>
-                <p>I have been interested in coding and the general computer science field since a young age. I am always seeking to add new features and skills to by toolkit, and am always looking to put it into use in my projects. Apart from computer science, I also have a good eye for design principles and creating user friendly UI/UX. I also have some biomedical knowledge!</p>
+                <p>The collision of design and programming is where one can create products that are both beautiful and functional, intuitive and efficient, and impactful and innovative. Herein, we must find the perfect balance.</p>
             </div>
             <div class="footer">
                 <p>Designed & Built by Leon P.</p>

@@ -1,76 +1,81 @@
-import { useState } from "react";
-import "./App.css";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
-function Tabs() {
-    //stupid goddamn class toggler for tabs
-    function myFunction(e) {
-        var elems = document.querySelectorAll(".active");
-        [].forEach.call(elems, function(el) {
-          el.classList.remove("active");
-        });
-        e.classList.add("active");
-      }
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
 
   return (
-    <div className="tabholder">
-      <div className="bloc-tabs">
-        <button className="tab_btn" onClick={({target})=> myFunction(target)}>Tab 1</button>
-        <button className="tab_btn"  onClick={({target})=> myFunction(target)}>Tab 2</button>
-        <button className="tab_btn"  onClick={({target})=> myFunction(target)}>Tab 3</button>
-        <button className="tab_btn"  onClick={({target})=> myFunction(target)}>Tab 4</button>
-      </div>
-
-      <div className="content-tabs">
-        <div
-          className= "content"
-        >
-          <h2>Content 1</h2>
-          <hr />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            praesentium incidunt quia aspernatur quasi quidem facilis quo nihil
-            vel voluptatum?
-          </p>
-        </div>
-
-        <div
-          className= "content"
-          >
-          <h2>Content 2</h2>
-          <hr />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            voluptatum qui adipisci.
-          </p>
-        </div>
-
-        <div
-          className= "content"
-          >
-          <h2>Content 3</h2>
-          <hr />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sed
-            nostrum rerum laudantium totam unde adipisci incidunt modi alias!
-            Accusamus in quia odit aspernatur provident et ad vel distinctio
-            recusandae totam quidem repudiandae omnis veritatis nostrum
-            laboriosam architecto optio rem, dignissimos voluptatum beatae
-            aperiam voluptatem atque. Beatae rerum dolores sunt.
-          </p>
-        </div>
-        <div
-          className= "content"
-        >
-          <h2>Content 2</h2>
-          <hr />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            voluptatum qui adipisci.
-          </p>
-        </div>
-      </div>
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`vertical-tabpanel-${index}`}
+      aria-labelledby={`vertical-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
     </div>
   );
 }
 
-export default Tabs;
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `vertical-tab-${index}`,
+    'aria-controls': `vertical-tabpanel-${index}`,
+  };
+}
+
+export default function VerticalTabs() {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <Box
+      sx={{ flexGrow: 1, bgcolor: '#191f28', display: 'flex', height: 224 }}
+    >
+      <Tabs
+        orientation="vertical"
+        variant="scrollable"
+        TabIndicatorProps={{
+          style: {
+            backgroundColor: "var(--accent3)"
+          }
+        }}
+        value={value}
+        onChange={handleChange}
+        aria-label="Vertical tabs example"
+        sx={{ borderRight: 1, borderColor: 'divider' }}
+      >
+        <Tab label="Item One" {...a11yProps(0)} />
+        <Tab label="Item Two" {...a11yProps(1)} />
+        <Tab label="Item Three" {...a11yProps(2)} />
+
+      </Tabs>
+      <TabPanel value={value} index={0} >
+        Item One
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        Item Two
+      </TabPanel>
+      <TabPanel value={value} index={2} >
+        Item Three
+      </TabPanel>
+    </Box>
+  );
+}
