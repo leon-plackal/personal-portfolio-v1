@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;500;700&family=Montserrat:wght@300&family=Roboto+Mono&display=swap');
 .theme-light {
-    --bgColor: #191919;
+    --bgColor: #161616;
+    
     --dot-color: #afafaf;
-    --textHeading: #e5e5e5;
+    --textHeading: #cfcfcf;
     --text2: #A7A9AC;
     --text3: rgb(117, 117, 117);
     --textsmall: #6b6b6b;
     --accent2: #191f28;
     --border: #afafaf;
     --accent3: #26dc96;
-
+    --radial1: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.023) 1%, rgba(0, 0, 0, 1) 27%);
  }
+ @value --dot-color: #afafaf;
+
 .theme-dark {
     --bgColor: #f5f5f5;
     --dot-color: #000000;
@@ -21,6 +24,7 @@
     --accent2: #dfdfdf;
     --border: #343434;
     --accent3: #13535a;
+    --radial1: radial-gradient(circle at 50% 50%, rgba(176, 176, 176, 0.47) 0%, rgba(93, 93, 93, 0.156) 1%, rgb(233, 233, 233) 17%);
 } 
 .faicon1{
   color: white;
@@ -220,12 +224,13 @@ h3{
   gap: 2rem;
 }
 .tile{
-  width: 100%;
+  width: 20rem;
   height: 200px;
   background-color: #b4b4b4;
   border: var(--textHeading) 2px solid;
 }
 .featured-project{
+  position: relative;
   display: grid;
   height: 350px;
   margin: 4rem auto;
@@ -242,7 +247,7 @@ h3{
 }
 
 .featured-project .info{
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
   z-index: 20;
   justify-self: flex-end;
   display: flex;
@@ -273,8 +278,9 @@ h3{
 }
 
 .tags{
-  position: relative;
-  bottom: 0px;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
 }
 
 
@@ -290,18 +296,16 @@ h3{
   z-index: -100;
   width: 95%;
   height: 90vh;
-  background-color: var(--bgColor);
+  /* background-color: var(--bgColor); */
   margin: auto;
   display: flex;
   left: 2.5%;
   right: auto;
   top: 3rem;
   border: 1px solid var(--text2);
+  background:var(--radial1)
 }
 
-.fdsa{
-  z-index: 10;
-}
 
 .featured-project .image{
   display: flex;
@@ -311,10 +315,11 @@ h3{
   max-height:100%;
   object-fit: cover;
   opacity: 0.9;
+  transition: all 0.3s ease-out;
+
 }
 .featured-project .image img:hover{
   opacity: 1;
-  transition: 0.5s ease-in-out;
 }
 
 
@@ -371,8 +376,64 @@ h3{
   margin: 0 0 1rem 0 ;
 }
 #tabdiv{
+  display: none;
   padding: 2rem 0;
 }
 #tabdiv h3{
     padding: 1rem 0;
+}
+
+.tile{
+  display: flex;
+  position: relative;
+}
+
+.tile a{
+  z-index: 1;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.archiveimage img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  opacity: 0.9;
+  z-index: 0;
+  transition: all 0.3s ease-out;
+
+}
+.archiveimage img:hover{
+  opacity: 1;
+}
+.archiveinfo{
+  pointer-events: none;
+  z-index: 1;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  padding: 1rem;
+}
+.archiveinfo h6{
+  font-size: 1.4rem;
+  color: rgb(209, 209, 209);
+}
+.archiveinfo p{
+  color: var(--textsmall);
+}
+#socials-icon2{
+  fill:#26dc96;
+}
+
+
+/* scroll reveals */
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.revactive{
+  transform: translateY(0);
+  opacity: 1;
 }

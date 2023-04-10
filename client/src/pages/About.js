@@ -50,7 +50,7 @@ export default function About() {
             </div>
 
             <div id='aboutcontent'>
-            <p>Hello! My name is Leon. I have been interested in coding and the general computer science field since a young age. I am always seeking to add new features and skills to by toolkit, and am always looking to put it into use in my projects. Apart from computer science, I also have a good eye for design principles and creating user friendly UI/UX. I also have some biomedical knowledge!</p>
+            <p>Hello! My name is Leon. I have been interested in coding and the general computer science field since a young age. I am always seeking to add new features and skills to my toolkit, and am always looking to put it into use in my projects. Apart from computer science, I also have a good eye for design principles and creating user friendly UI/UX.</p>
 
             <p>Most of my work resides within the web development scene. Here are some technologies I have been working with recently:</p>
             <ul>
@@ -61,7 +61,6 @@ export default function About() {
             </ul>
             
             <p>However I also have experience in desktop and web app development with these technologies:</p><ul>
-                <li>Java</li>
                 <li>C#</li>
                 <li>Electron</li>
                 <li>.NET</li>

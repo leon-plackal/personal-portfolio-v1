@@ -65,16 +65,18 @@ export default function Projects() {
                             <li>CSS</li>
                             <li>HTML</li>
                         </ul>
+                        <div id="taglink">
+                            <a href='https://github.com/leon-plackal'>
+                                <AiFillGithub id='socials-icon' />
+                            </a>
+                        </div>
                     </div>
-                    <div class="featured-links">
-                        <i class="fa-brands fa-github"></i>
-                        <i class="fa-solid fa-up-right-from-square"></i>
-                    </div>
+                    
                 </div>
             </div>
             <div class="featured-project">
                 <div class="image">
-                <img src={image1} alt="KeyNinja" />
+                <img src={image1} alt="Portfolio V1" />
                 </div>
                 <div class="info">
                     <h3>Featured Project</h3>
@@ -89,17 +91,30 @@ export default function Projects() {
                             <li>HTML</li>
                             <li>ReactJS</li>
                         </ul>
+                        <div id="taglink">
+                            <a href='https://github.com/leon-plackal'>
+                                <AiFillGithub id='socials-icon' />
+                            </a>
+                        </div>
                     </div>
-                    <div class="featured-links">
-                        <i class="fa-brands fa-github"></i>
-                        <i class="fa-solid fa-up-right-from-square"></i>
-                    </div>
+        
                 </div>
             </div>
 
             <h3 className="subheading">Project Archive</h3>
             <div class="archive-tiles">
-                <div class="tile"></div>
+                <div class="tile">
+                    <div class="archiveinfo">
+                        <h6>AI project</h6>
+                        <p>Deep Learning AI project</p>
+                    </div>
+                    <a href='https://github.com/leon-plackal'>
+                                <AiFillGithub id='socials-icon2' />
+                    </a>
+                    <div class="archiveimage">
+                        <img src={image2} alt="xxxx"/>
+                    </div>
+                </div>
                 <div class="tile"></div>
                 <div class="tile"></div>
                 <div class="tile"></div>
