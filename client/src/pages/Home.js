@@ -26,8 +26,11 @@ function toggleTheme() {
 (function () {
  if (localStorage.getItem('theme') === 'theme-light') {
      setTheme('theme-light');
- } else {
+ } else if (localStorage.getItem('theme') === 'theme-dark'){
      setTheme('theme-dark');
+ }
+ else{
+  setTheme('theme-light');
  }
 })();
 

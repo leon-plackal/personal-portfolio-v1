@@ -199,7 +199,7 @@ h3{
 }
 
 .container{
-  width: 50%;
+  width: 60%;
   margin: auto;
 }
 
@@ -250,7 +250,7 @@ h3{
   position: absolute;
   justify-self:flex-start;
   height: 347px;
-  width: 450px;
+  width: 45%;
   background-color: #c5c5c5;
 }
 
@@ -262,7 +262,7 @@ h3{
   flex-direction: column;
   justify-content: right;
   text-align: right;
-
+  width: 50%;
 }
 .featured-project .info h3{
   font-size: 1.1rem;
@@ -275,6 +275,7 @@ h3{
   font-size: 2rem;
   padding-bottom: 1rem;
 }
+
 .featured-project .info ul{
   display: flex;
   gap: 1rem;justify-content: right;
@@ -294,7 +295,7 @@ h3{
 
 .featured-description{
   flex-wrap: wrap;
-  width: 400px;
+  width: 100%;
 }
 
 .anim {
@@ -311,7 +312,7 @@ h3{
   border: 1px solid var(--text2);
   background:var(--radial1)
 }
-@media screen and (max-width: 1800px) {
+@media screen and (max-width: 1200px) {
   .featured-project .image img{
     display: none;
   }
@@ -325,11 +326,9 @@ h3{
   .tile-row{
     justify-content:left;
   }
-  .tile{
-    width: 40%;
-  }
+
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
   .tile{
     width: 100%;
   }
@@ -351,12 +350,7 @@ h3{
   .container{
     width: 80%;
   }
-  .featured-project .info{
-    padding: 0;
-    padding-top: 1rem;
-    align-items: center;
-    text-align: center;
-  }
+
   .tags{
     position: relative;
     padding: 0;
