@@ -8,7 +8,7 @@ import About from './pages/About'
 function App() {
   return (
     
-      <Routes>
+      <Routes basename={process.env.PUBLIC_URL}>
       {/* each has a template header taken from layout */}
         <Route path="/" element={<Layout/>}>
           {/* add specifics for each page */}
