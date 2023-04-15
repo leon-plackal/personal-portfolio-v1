@@ -169,11 +169,11 @@ export default function Home (){
             <div id="home-info">
                 <div class="info-title">
                     <h1>Leon Plackal </h1>
-                    <h4>Developer</h4>
+                    <h4>Software Developer</h4>
                 </div>
             </div>
             <div class="description">   
-                <h3>0.1 About Me</h3>
+                <h3>Preface</h3>
                 <div id="subheading-line"></div>
                 <p>The collision of design and programming is where one can create products that are both beautiful and functional, intuitive and efficient, and impactful and innovative. Herein, we must find the perfect balance.</p>
             </div>

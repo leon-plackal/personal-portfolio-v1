@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom"
 import image2 from "../assets/KeyNinja.png"
 import image1 from "../assets/portfoliov1.png"
+import image3 from "../assets/denoiser_thumb.png"
 import { AiFillGithub } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { GiPlainCircle } from 'react-icons/gi';
@@ -97,27 +98,31 @@ export default function Projects() {
                             </a>
                         </div>
                     </div>
-        
                 </div>
             </div>
 
             <h3 className="subheading">Project Archive</h3>
             <div class="archive-tiles">
-                <div class="tile">
-                    <div class="archiveinfo">
-                        <h6>AI project</h6>
-                        <p>Deep Learning AI project</p>
-                    </div>
-                    <a href='https://github.com/leon-plackal'>
-                                <AiFillGithub id='socials-icon2' />
-                    </a>
-                    <div class="archiveimage">
-                        <img src={image2} alt="xxxx"/>
-                    </div>
+                <div className="tile-row">
+                        <div class="tile">
+                            <div class="archiveinfo">
+                                <h6>Simple Image Denoiser</h6>
+                                <p>Image processing with Python</p>
+                            </div>
+                            <a href='https://github.com/leon-plackal/simple_denoiser'>
+                                        <AiFillGithub id='socials-icon2' />
+                            </a>
+                            <div class="archiveimage">
+                                <img src={image3} alt="xxxx"/>
+                            </div>
+                        </div>
+
+                        <div class="tile"></div>
+                        <div class="tile"></div>
                 </div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
+                <div className="tile-row">
+                    <div class="tile"></div>
+                </div>
             </div>
         </div>
     </section>

@@ -12,7 +12,6 @@
     --accent3: #26dc96;
     --radial1: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.023) 1%, rgba(0, 0, 0, 1) 27%);
  }
- @value --dot-color: #afafaf;
 
 .theme-dark {
     --bgColor: #f5f5f5;
@@ -78,7 +77,7 @@ h3{
 .subheading{
   color: var(--accent3);
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 }
 .logo{
   height: 50px;
@@ -92,7 +91,7 @@ h3{
 #home-info{
   display: flex;
   position: absolute;
-  left: 3.5%;
+  left: 4rem;
   top: 3.0%;
 }
 .description {
@@ -100,7 +99,7 @@ h3{
   flex-direction: column;
   width: 300px;
   position: absolute;
-  left: 3.5%;
+  left: 4rem;
   bottom: 7%;
 }
 .info-title h1{
@@ -114,6 +113,7 @@ h3{
 .info-title h4{
   font-family: 'Manrope', sans-serif;
   color: var(--textHeading);
+  padding-left: 0.2rem;
 }
 .info-title{
   justify-content: left;
@@ -131,7 +131,7 @@ h3{
   flex-direction: column;
   gap: 10rem;
   width: 40px;
-  right: 0.5%;
+  right: 0.2%;
   left: auto;
   bottom: 50px;
   z-index: 10;
@@ -161,6 +161,7 @@ h3{
 }
 #socials-icon{
   fill: var(--text2);
+  font-size: 1.5rem;
 }
 .left-bar {
   width: 40px;
@@ -217,16 +218,23 @@ h3{
   color: var(--textHeading);
 }
 .archive-tiles{
-  padding: 2rem 0;
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2rem 0;
   gap: 2rem;
 }
+
+.tile-row{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2rem;
+  justify-content: space-between;
+}
 .tile{
-  width: 20rem;
+  width: 30%;
   height: 200px;
-  background-color: #b4b4b4;
   border: var(--textHeading) 2px solid;
 }
 .featured-project{
@@ -287,23 +295,112 @@ h3{
 .featured-description{
   flex-wrap: wrap;
   width: 400px;
-  /* border-radius: 3px;
-  background-color: #b4b4b4; */
 }
 
 .anim {
   position: absolute;
   z-index: -100;
-  width: 95%;
+  /* width: 95%; */
   height: 90vh;
-  /* background-color: var(--bgColor); */
   margin: auto;
   display: flex;
-  left: 2.5%;
-  right: auto;
+  left: 3rem;
+  right: 3rem;
   top: 3rem;
+  bottom: 3rem;
   border: 1px solid var(--text2);
   background:var(--radial1)
+}
+@media screen and (max-width: 1800px) {
+  .featured-project .image img{
+    display: none;
+  }
+  .featured-project .image{
+    background-color: transparent;
+  }
+  .featured-project{
+    width: 100%;
+    margin: 4rem 0 4rem 0;
+  }
+  .tile-row{
+    justify-content:left;
+  }
+  .tile{
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .tile{
+    width: 100%;
+  }
+  .featured-project{
+    width: 100%;
+    margin: 4rem 4rem 0 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  .footer{
+    display: none;
+  }
+  #home-info h1{
+    font-size: 3rem;
+  }
+  #subheading-line{
+    width: 90%;
+  }
+  .container{
+    width: 80%;
+  }
+  .featured-project .info{
+    padding: 0;
+    padding-top: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+  .tags{
+    position: relative;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .tags ul{
+    padding: 0;
+  }
+  .featured-description{
+    width: 90%;
+  }
+  .featured-project {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  #home-info h1{
+    font-size: 2rem;
+  }
+  #subheading-line{
+    width: 77%;
+  }
+  .description p{
+    width: 240px;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .anim{
+    left: 2rem;
+    right: 2rem;
+    top: 2rem;
+    bottom: 2rem;
+  }
+  .description{
+    left: 3rem;
+  }
+  #home-info {
+    left: 3rem;
+  }
 }
 
 
@@ -367,7 +464,9 @@ h3{
 }
 
 #aboutcontent{
+  padding: 1rem;
   color: var(--text2);
+  border: var(--accent2) 2px solid;
 }
 #aboutcontent p{
   padding-bottom: 1rem;
@@ -386,6 +485,7 @@ h3{
 .tile{
   display: flex;
   position: relative;
+  background-color: #000000;
 }
 
 .tile a{
@@ -398,7 +498,7 @@ h3{
   width:100%;
   height:100%;
   object-fit: cover;
-  opacity: 0.9;
+  opacity: 0.6;
   z-index: 0;
   transition: all 0.3s ease-out;
 
@@ -415,11 +515,11 @@ h3{
   padding: 1rem;
 }
 .archiveinfo h6{
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: rgb(209, 209, 209);
 }
 .archiveinfo p{
-  color: var(--textsmall);
+  color: #26dc96;
 }
 #socials-icon2{
   fill:#26dc96;
