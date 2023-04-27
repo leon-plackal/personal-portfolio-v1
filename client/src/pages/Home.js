@@ -165,8 +165,9 @@ export default function Home (){
                   <a href='https://github.com/leon-plackal'>
                     <AiFillGithub id='socials-icon' />
                   </a>
-                    
+                    <a href='https://au.linkedin.com/in/leon-plackal'>
                   <AiFillLinkedin id='socials-icon'/>
+                  </a>
                  </div> 
             </div>
             <div id="home-info">
