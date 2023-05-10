@@ -122,7 +122,7 @@ export default function Projects() {
                         <div class="tile">
                             <div class="archiveinfo">
                                 <h6>Simple Image Denoiser</h6>
-                                <p>Image processing with Python</p>
+                                <p>Image processing with Python, using skimage and BM3D</p>
                             </div>
                             <a href='https://github.com/leon-plackal/simple_denoiser'>
                                         <AiFillGithub id='socials-icon2' />
@@ -130,18 +130,30 @@ export default function Projects() {
                             <div class="archiveimage">
                                 <img src={image3} alt="xxxx"/>
                             </div>
+                            <div className="tagdate">
+                            2023
+                            </div>
                         </div>
                     
                         <div class="tile">
+                            
                             <div class="archiveinfo">
                                 <h6>Portfolio V1</h6>
-                                <p>The first iteration of my Portfolio built with React</p>
+                                <p>The first iteration of my Portfolio built with React and ThreeJS</p>
                             </div>
-                            <a href='https://github.com/leon-plackal'>
+                            
+                            <a href='https://github.com/leon-plackal/personal-portfolio-v1'>
                                         <AiFillGithub id='socials-icon2' />
+                            </a>
+                            <a href='https://leon-plackal.github.io/portfolio1/#/'>
+                                <BiLink id='socials-icon3' />
+                        
                             </a>
                             <div class="archiveimage">
                                 <img src={image1} alt="xxxx"/>
+                            </div>
+                            <div className="tagdate">
+                            2022
                             </div>
                         </div>
                         <div class="tile"></div>

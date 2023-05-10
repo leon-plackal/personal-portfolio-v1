@@ -58,12 +58,14 @@ export default function About() {
                 <li>Javascript</li>
                 <li>MongoDB</li>
                 <li>Python</li>
+                <li>Express</li>
             </ul>
             
             <p>However I also have experience in desktop and web app development with these technologies:</p><ul>
-                <li>C#</li>
-                <li>Electron</li>
-                <li>.NET</li>
+                <li>Java</li>
+                <li>MySQL</li>
+                <li>Vite</li>
+                <li>Vercel, Netlify, Render</li>
             </ul>
             <p>My other interests also include machine learning and utilising artificial intelligence to make our lives easier and more effcient. Nice to meet you!</p>
             <div id="tabdiv">
