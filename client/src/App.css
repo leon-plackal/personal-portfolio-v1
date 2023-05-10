@@ -161,7 +161,7 @@ h3{
 }
 #socials-icon{
   fill: var(--text2);
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .left-bar {
   width: 40px;
@@ -288,10 +288,14 @@ h3{
 
 .tags{
   position: absolute;
-  bottom: 2rem;
+  bottom: 1rem;
   right: 2rem;
 }
-
+#taglink{
+  justify-content: right;
+  display: flex;
+  gap: 1rem;
+}
 
 .featured-description{
   flex-wrap: wrap;
@@ -312,7 +316,7 @@ h3{
   border: 1px solid var(--text2);
   background:var(--radial1)
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1600px) {
   .featured-project .image img{
     display: none;
   }
@@ -491,8 +495,8 @@ h3{
 .tile a{
   z-index: 1;
   position: absolute;
-  bottom: 3.5rem;
-  left: 1rem;
+  top: 0.5rem;
+  right: 1rem;
 }
 .archiveimage img{
   width:100%;
@@ -523,6 +527,7 @@ h3{
 }
 #socials-icon2{
   fill:#26dc96;
+  font-size: 1.5rem;
 }
 
 
