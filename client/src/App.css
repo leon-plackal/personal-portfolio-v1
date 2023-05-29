@@ -240,7 +240,7 @@ h3{
 .featured-project{
   position: relative;
   display: grid;
-  height: 350px;
+  height: 380px;
   margin: 4rem auto;
   background-color: var(--accent2);
   border: var(--border) 2px solid;
@@ -249,7 +249,7 @@ h3{
 .featured-project .image{
   position: absolute;
   justify-self:flex-start;
-  height: 347px;
+  height: 100%;
   width: 45%;
   background-color: #c5c5c5;
 }
@@ -284,9 +284,14 @@ h3{
   font-family: 'Roboto Mono', monospace;
   list-style-type: none;
   color: var(--accent3);
+  align-self:flex-end;
 }
 
 .tags{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: right;
   position: absolute;
   bottom: 1rem;
   right: 2rem;
@@ -316,7 +321,17 @@ h3{
   border: 1px solid var(--text2);
   background:var(--radial1)
 }
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1500px) {
+  .featured-description p{
+    font-size: 14px !important;
+  }
+  .tags ul{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 1200px) {
   .featured-project .image img{
     display: none;
   }
@@ -397,12 +412,20 @@ h3{
   .featured-project{
     padding: 0;
     justify-content: center;
+    height: 100%;
   }
   .featured-project .info{
     padding: 1rem;
   }
+  .tags ul{
+    display: flex;
+    flex-wrap: wrap;
+  }
   #home-info {
     left: 3rem;
+  }
+  #socials-icon{
+    width: 20px;
   }
 
 }
@@ -492,11 +515,15 @@ h3{
   background-color: #000000;
 }
 
-.tile a{
+
+.archive-links{
   z-index: 1;
   position: absolute;
   top: 0.5rem;
   right: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
 }
 .archiveimage img{
   width:100%;
@@ -531,7 +558,7 @@ h3{
 #socials-icon3{
   fill:#26dc96;
   font-size: 1.5rem;
-  right: 2rem;
+  /* right: 2rem; */
   position: relative;
 }
 .tagdate{
