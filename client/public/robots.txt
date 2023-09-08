@@ -1,36 +1,3 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
-
-
-<div class="featured-project">
-                    <div class="image">
-                        <img src={ArtiGenTmb} alt="Portfolio V1" />
-                    </div>
-                    <div class="info">
-                        <h3>Featured Project</h3>
-                        <h2>ArtiGen AI Art App</h2>
-                        <div class="featured-description">
-                            <p>This website makes use of the OpenAI API to allow users to create their own artworks via a prompt and have the choice to add it to my community showcase for everyone to see. The site utilizes the Vite framework and additionally MongoDB, Tailwind CSS, Express and cloud image hosting.
-                                The app is deployed with Vercel and Render.
-                            </p>
-                        </div>
-                        <div class="tags">
-                            <ul>
-                                <li>Vite</li>
-                                <li>TailwindCSS</li>
-                                <li>Cloudinary</li>
-                                <li>ReactJS</li>
-                                <li>Vercel</li>
-                            </ul>
-                            <div id="taglink">
-                                <a href='https://artigenai.vercel.app/'>
-                                    <BiLink id='socials-icon' />
-                                </a>
-                                <a href='https://github.com/leon-plackal'>
-                                    <AiFillGithub id='socials-icon' />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>

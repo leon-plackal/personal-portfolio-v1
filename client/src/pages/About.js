@@ -2,7 +2,6 @@ import { AiFillGithub } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { GiPlainCircle } from 'react-icons/gi';
 import {Link} from "react-router-dom"
-import Tabs from '../Tabs';
 
 function setTheme(themeName) {
     localStorage.setItem('theme', themeName);
@@ -39,13 +38,14 @@ export default function About() {
                   <a href='https://github.com/leon-plackal'>
                     <AiFillGithub id='socials-icon' />
                   </a>
-                    
-                  <AiFillLinkedin id='socials-icon'/>
+                  <a href='https://au.linkedin.com/in/leon-plackal'>
+                        <AiFillLinkedin id='socials-icon' />
+                    </a>
                  </div> 
             </div>
 
             <div id='aboutheader'>
-                <p className='subheading'>What I Offer</p>
+                <p className='subheading'>Who am I?</p>
                 <h1 class="title">0.1 About Me</h1>
             </div>
 
@@ -56,22 +56,20 @@ export default function About() {
             <ul>
                 <li>React</li>
                 <li>Javascript</li>
-                <li>MongoDB</li>
-                <li>Python</li>
-                <li>Express</li>
+                <li>AWS</li>
+                <li>NodeJS</li>
+                <li>Firebase</li>
             </ul>
             
-            <p>However I also have experience in desktop and web app development with these technologies:</p><ul>
+            <p>However I also have experience in desktop and content creation with these technologies:</p><ul>
                 <li>Java</li>
-                <li>MySQL</li>
-                <li>Vite</li>
-                <li>Vercel, Netlify, Render</li>
+                <li>Python</li>
+                <li>Unreal Engine</li>
+                <li>Adobe Photoshop</li>
+                <li>Supabase, Vercel, Netlify</li>
             </ul>
-            <p>My other interests also include machine learning and utilising artificial intelligence to make our lives easier and more effcient. Nice to meet you!</p>
-            <div id="tabdiv">
-                <h3 className='subheading'>Places I've worked</h3>
-                <Tabs />
-            </div>
+            <p>My other interests also include UI design, machine learning and utilising artificial intelligence to make our lives easier and more effcient. Nice to meet you!</p>
+            
             </div>
         </section>
     )

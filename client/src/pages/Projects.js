@@ -2,8 +2,10 @@ import { Link } from "react-router-dom"
 import image2 from "../assets/KeyNinja.png"
 import image1 from "../assets/portfoliov1.png"
 import image3 from "../assets/denoiser_thumb.png"
+import reactRedditImg from "../assets/thumb_react-reddit-video.png"
 import ArtiGenTmb from "../assets/ArtiGenThumb.png"
 import AceResume from "../assets/home2.jpg"
+import Dodgefall from "../assets/thumb_dodgefall.png"
 import { AiFillGithub } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { GiPlainCircle } from 'react-icons/gi';
@@ -74,7 +76,10 @@ export default function Projects() {
                                 <li>OpenAI API</li>
                             </ul>
                             <div id="taglink">
-                                <a href='https://github.com/leon-plackal/AceResume'>
+                                <a href='https://ace-resume.vercel.app/' target="_blank" rel="noreferrer">
+                                    <BiLink id='socials-icon' />
+                                </a>
+                                <a href='https://github.com/leon-plackal/AceResume' target="_blank" rel="noreferrer">
                                     <AiFillGithub id='socials-icon' />
                                 </a>
                             </div>
@@ -102,10 +107,10 @@ export default function Projects() {
                                 <li>Vercel</li>
                             </ul>
                             <div id="taglink">
-                                <a href='https://artigenai.vercel.app/'>
+                                <a href='https://artigenai.vercel.app/' target="_blank" rel="noreferrer">
                                     <BiLink id='socials-icon' />
                                 </a>
-                                <a href='https://github.com/leon-plackal/ArtiGen-AI-art-app'>
+                                <a href='https://github.com/leon-plackal/ArtiGen-AI-art-app' target="_blank" rel="noreferrer">
                                     <AiFillGithub id='socials-icon' />
                                 </a>
                             </div>
@@ -115,24 +120,27 @@ export default function Projects() {
                 </div>
 
                 {/* Archive */}
-                <h3 className="subheading">Project Archive</h3>
+                <h3 className="subheading">Other Projects</h3>
                 <div class="archive-tiles">
                     <div className="tile-row">
 
                         <div class="tile">
                             <div class="archiveinfo">
-                                <h6>Simple Image Denoiser</h6>
-                                <p>Image processing with Python, using skimage and BM3D</p>
+                                <h6>react-reddit-video</h6>
+                                <p>An npm react package to help with showing reddit videos from the redditAPI</p>
                             </div>
 
                             <div className="archive-links">
-                                <a href='https://github.com/leon-plackal/simple_denoiser'>
+                                <a href='https://github.com/leon-plackal/react-reddit-video' target="_blank" rel="noreferrer">
                                     <AiFillGithub id='socials-icon2' />
+                                </a>
+                                <a href='https://www.npmjs.com/package/react-reddit-video' target="_blank" rel="noreferrer">
+                                    <BiLink id='socials-icon3' />
                                 </a>
                             </div>
 
                             <div class="archiveimage">
-                                <img src={image3} alt="xxxx" />
+                                <img src={reactRedditImg} alt="npm - react-reddit-video"/>
                             </div>
                             <div className="tagdate">
                                 2023
@@ -146,10 +154,10 @@ export default function Projects() {
                                 <p>The first iteration of my Portfolio built with React and ThreeJS</p>
                             </div>
                             <div className="archive-links">
-                                <a href='https://github.com/leon-plackal/personal-portfolio-v1'>
+                                <a href='https://github.com/leon-plackal/personal-portfolio-v1' target="_blank" rel="noreferrer">
                                     <AiFillGithub id='socials-icon2' />
                                 </a>
-                                <a href='https://leon-plackal.github.io/portfolio1/#/'>
+                                <a href='https://leon-plackal.github.io/portfolio1/#/' target="_blank" rel="noreferrer">
                                     <BiLink id='socials-icon3' />
 
                                 </a>
@@ -168,11 +176,11 @@ export default function Projects() {
                                 <p>Simple typing practise game with error detection and WPM/timers</p>
                             </div>
                             <div className="archive-links">
-                                <a href='https://github.com/leon-plackal/Key-Ninja'>
+                                <a href='https://github.com/leon-plackal/Key-Ninja' target="_blank" rel="noreferrer">
                                     <AiFillGithub id='socials-icon2' />
                                 </a>
 
-                                <a href='https://keyninjatype.netlify.app/'>
+                                <a href='https://keyninjatype.netlify.app/' target="_blank" rel="noreferrer">
                                     <BiLink id='socials-icon3' />
                                 </a>
                             </div>
@@ -184,9 +192,67 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
-                    {/* <div className="tile-row">
-                        <div class="tile"></div>
-                    </div> */}
+                    <div className="tile-row">
+                        <div class="tile">
+                            <div class="archiveinfo">
+                                <h6>Simple Image Denoiser</h6>
+                                <p>Image processing with Python, using skimage and BM3D</p>
+                            </div>
+
+                            <div className="archive-links">
+                                <a href='https://github.com/leon-plackal/simple_denoiser' target="_blank" rel="noreferrer">
+                                    <AiFillGithub id='socials-icon2' />
+                                </a>
+                            </div>
+
+                            <div class="archiveimage">
+                                <img src={image3} alt="xxxx" />
+                            </div>
+                            <div className="tagdate">
+                                2023
+                            </div>
+                        </div>
+
+                        <div class="tile">
+                            <div class="archiveinfo">
+                                <h6>UE5:Dodgefall</h6>
+                                <p>Dodgeball multiplayer game made in Unreal Engine</p>
+                            </div>
+
+                            <div className="archive-links">
+                                
+                            </div>
+
+                            <div class="archiveimage" style={{opacity: '80%'}}>
+                                <img src={Dodgefall} alt="dodgefall" />
+                            </div>
+                            <div className="tagdate">
+                                2023
+                            </div>
+                        </div>
+
+                        <div class="tile" style={{opacity: '0'}}>
+                            {/* <div class="archiveinfo">
+                                <h6>Simple Image Denoiser</h6>
+                                <p>Image processing with Python, using skimage and BM3D</p>
+                            </div>
+
+                            <div className="archive-links">
+                                <a href='https://github.com/leon-plackal/simple_denoiser' target="_blank" rel="noreferrer">
+                                    <AiFillGithub id='socials-icon2' />
+                                </a>
+                            </div>
+
+                            <div class="archiveimage">
+                                <img src={image3} alt="xxxx" />
+                            </div>
+                            <div className="tagdate">
+                                2023
+                            </div> */}
+                        </div>
+                    </div>
+
+                        
                 </div>
             </div>
         </section>

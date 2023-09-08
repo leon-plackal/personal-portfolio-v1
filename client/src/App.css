@@ -77,7 +77,7 @@ h3{
 .subheading{
   color: var(--accent3);
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.8rem;
 }
 .logo{
   height: 50px;
@@ -368,6 +368,9 @@ h3{
   }
   .container{
     width: 80%;
+  }
+  #project{
+    padding: 2rem 0;
   }
 
   .tags{
